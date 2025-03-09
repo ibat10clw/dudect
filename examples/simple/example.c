@@ -17,7 +17,7 @@ uint8_t secret[SECRET_LEN_BYTES] = {0, 1, 2, 3, 4, 5, 6, 42};
 /* this will be called over and over */
 uint8_t do_one_computation(uint8_t *data) {
   /* simulate totally bogus MAC check in non-constant time */
-  return check_tag(data, secret, SECRET_LEN_BYTES);
+  return check_tag(data, secret, 8);
 }
 
 /* called once per number_measurements */
